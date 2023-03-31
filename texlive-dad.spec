@@ -1,6 +1,6 @@
 Name:		texlive-dad
 Version:	54191
-Release:	1
+Release:	2
 Summary:	Simple typesetting system for mixed Arabic/Latin documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dad

@@ -3,7 +3,7 @@ Version:	54191
 Release:	2
 Summary:	Simple typesetting system for mixed Arabic/Latin documents
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dad
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dad
 License:	lppl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dad.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dad.doc.r%{version}.tar.xz

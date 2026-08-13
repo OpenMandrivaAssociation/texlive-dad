@@ -1,9 +1,10 @@
 %global tl_name dad
 %global tl_revision 54191
+%global tl_version 1.2
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.2
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Simple typesetting system for mixed Arabic/Latin documents
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dad.r%{tl_revisi
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dad.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package allows simple typesetting in Arabic script, intended for
@@ -22,3 +24,10 @@ are discouraged. The system operates with both Unicode and
 transliterated input, allowing the user to choose the most appropriate
 approach for every situation.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from dad:
+Map dad.map
+TL_DROPIN_EOF
